@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys, os
+from autobahn.twisted import choosereactor
+choosereactor.install_optimal_reactor(False)
+sys.path.insert(0, os.path.split(__file__)[0])
+from twisted.internet import reactor
+from toughportal.listen import cmcc_server
+from toughportal.tools import config
+
+if __name__ == '__main__':
+    cmcc_server.run(config.find_config())
+    reactor.run()

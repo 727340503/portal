@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>${tpl.get('page_title') or u'登录_沃云网络无线网络'}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="${requri}/static/common/public/sz-telecom/zglt/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${requri}/static/common/public/sz-telecom/zglt/css/font-awesome.min.css">
+    <link href="${requri}/static/common/public/sz-telecom/zglt/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+        .clr {
+            clear: both;
+        }
+    </style>
+    <script src="${requri}/static/common/images/iscroll4.1.9.js"></script>
+    <link href="${requri}/static/common/css/mini.css" rel="stylesheet" type="text/css"/>
+    <script src="${requri}/static/js/jquery-1.11.0.min.js"></script>
+
+
+    <script type="text/javascript">
+        // 初始化幻灯
+        var myScroll;
+        function loaded() {
+            myScroll = new iScroll('wrapper', {
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                onScrollEnd: function () {
+                    document.querySelector('#indicator > li.active').className = '';
+                    document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+    </script>
+</head>
+
+<body class="reg-bk allcenter reg-c">
+<header>
+    <div class="reg-c" style="position:relative;"><img
+            src="${tpl.get('header_img') or '%s/static/common/public/sz-telecom/zglt/images/header-bg.jpg'%requri}"
+            width="100%"/>
+        <a href="tel:4000309309" class="kf_tel"></a>
+        <!-- tel:4000309309 -->
+
+    </div>
+</header>
+
+
+<div class="reg-c" style=" margin:5px 0px 5px 0px;  /*text-indent: 2em;*/min-height: 173px; ">
+    <!--输入框-->
+    <form  action="/ikauth" method="post" name="getPass" id="loginForm" class="center">
+        <input id="checkPic" type="checkbox" name="memberPass" class="" onclick="return agree();" checked>
+        <label for="checkPic" style="display: inline-block;padding:0px;">本人接受<a href="/xieyi?tpl_name=common"
+                                                                                style="color:#fb2323;">沃云无线网络信息安全协议</a></label>
+            <span style="font-size: 12px; color: #C0BFBF;display: block;margin-bottom:10px;">
+				${handler.xsrf_form_html()}
+                <input type="hidden" name="qstr" value="${qstr or ''}">
+                <input type="hidden" name="gwid" value="${gwid or ''}">
+                <input type="hidden" name="mac" value="${mac or ''}">
+			    <input type="hidden" name="refer" value="${refer or ''}">
+			    <input type="hidden" name="domain" value="${domain or ''}">
+                <input type="hidden" name="end_url" value="${end_url or ''}">
+                <input type="hidden" name="gwid" value="${gwid or ''}">
+                <input type="hidden" name="user_ip" value="${user_ip or ''}">
+                <input type="hidden" name="callback_url" value="${callback_url or ''}">
+			<div class="n-user">
+                <input id="username" type="tel" name="username" class="newTxt b100 input-reg" value="" placeholder="用户名：" style="width:72%;display: inline-block;"><a id="tiyan" href="http://112.84.178.41/siwifiweb/experience" class="btr">免费注册</a>
+            </div>
+            <div class="n-pwd">
+                <input id="password" type="password" name="password" class="newTxt b100 input-reg" value=""
+                       placeholder="密码：" style="width:72%;display: inline-block;"><a
+                    href="http://112.84.178.41/siwifiweb/toWjPwd" class="btr">忘记密码</a>
+            </div>
+        </span>
+        % if msg:
+            <div style="font-size: 12px;padding: 0 10px;color: #F16364;padding-bottom: 5px;">${msg}</div>
+        % endif
+        <a class="pass-button b100 " onclick="doSubmit()" style="width: 48%;
+  float: left;">登&nbsp;&nbsp;录</a>
+        <a id="onlinepay" href="http://112.84.178.41/siwifiweb/onlinePaySelect?phone=" class="online-chong bt "
+           style="width: 48%;
+  float: right;">在线充值</a>
+        </p>
+
+
+    </form>
+    <div class="clr"></div>
+
+</div>
+
+
+<!--幻灯片-->
+<div class="banner">
+
+    <div id="wrapper">
+        <div id="scroller">
+            <ul id="thelist">
+
+                <li><p></p><img src="${tpl.get('ad1_img') or '%s/static/common/public/sz-telecom/zglt/images/1.jpg'%requri}">
+                </li>
+                <li><p></p><img src="${tpl.get('ad2_img') or '%s/static/common/public/sz-telecom/zglt/images/2.jpg'%requri}">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="nav">
+        <div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
+        <ul id="indicator">
+            <li class="active">1</li>
+            <li>2</li>
+
+        </ul>
+        <div id="next" onclick="myScroll.scrollToPage('next', 0,400,3);return false">next &rarr;</div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+<!--幻灯片end-->
+
+
+<footer>
+    <div class="copyight" style="margin:5px 0px 5px 0px;">
+        <div class="reg-c" style=" margin:5px 0px 5px 0px;padding:5px 10px;">
+            © ${tpl.get('copyright') or u'2015 沃云网络 版权所有'} </div>
+    </div>
+</footer>
+
+<script type='text/javascript'>
+    function doSubmit() {
+        var m = $("#username");
+        //if( !(/^1[3|4|5|7|8][0-9]\d{8}$/.test(m.val())))
+        //{
+        //	alert('请正确填写您的手机号！');
+        //	m.focus();
+        //	return false;
+        //}
+        //else
+        if (m.val() == '') {
+            alert('请填写您的用户账号！');
+            m.focus();
+            return false;
+        }
+        else if (!$('#checkPic').is(':checked')) {
+            alert('必须勾选"我已阅读中国联通信息安全协议"！');
+            return false;
+        }
+        else if ($("#password").val() == '' || $("#password").val().length < 6 || $("#password").val().length > 18) {
+            alert('请输入密码,且密码长度在6-18位之间！');
+            return false;
+        }
+        else {
+            $("#loginForm").submit();
+        }
+
+    }
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+            return decodeURI(r[2]);
+        return null;
+    }
+
+    $(function () {
+
+        var ssid = getQueryString("ssid");
+        var gwid = getQueryString("gwid");
+
+        $("#ssid").val(ssid);
+        $("#gwid").val(gwid);
+
+        if(ssid==null) {
+			ssid ='';
+		}
+		$('#tiyan').attr('href', 'http://112.84.178.41/siwifiweb/experience?ssid=' + ssid + '&gwid=' + getStrParam(base64decode(getUrlParam('enc')),'gwid'));
+    });
+
+
+</script>
+
+<script type="text/javascript" src="http://portal.ikuai8.com/sdk/ikAuth.js"></script>
+</body>
+</html>
+<script>
+    var count = document.getElementById("thelist").getElementsByTagName("img").length;
+
+    for (i = 0; i < count; i++) {
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+
+    }
+    document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+
+    setInterval(function () {
+        myScroll.scrollToPage('next', 0, 400, count);
+    }, 3500);
+    window.onresize = function () {
+        for (i = 0; i < count; i++) {
+            document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+        }
+        document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    }
+</script>
+<script>
+
+	/**
+ * base64解码,解码地址中的参数
+ *
+ */
+ var base64DecodeChars = new Array(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1);
+
+function base64decode(str){  //base64解码
+    var c1, c2, c3, c4;
+    var i, len, out;
+    len = str.length;
+    i = 0;
+    out = "";
+    while (i < len) {
+        /* c1 */
+        do {
+            c1 = base64DecodeChars[str.charCodeAt(i++) & 0xff];
+        }
+        while (i < len && c1 == -1);
+        if (c1 == -1)
+            break;
+        /* c2 */
+        do {
+            c2 = base64DecodeChars[str.charCodeAt(i++) & 0xff];
+        }
+        while (i < len && c2 == -1);
+        if (c2 == -1)
+            break;
+        out += String.fromCharCode((c1 << 2) | ((c2 & 0x30) >> 4));
+        /* c3 */
+        do {
+            c3 = str.charCodeAt(i++) & 0xff;
+            if (c3 == 61)
+                return out;
+            c3 = base64DecodeChars[c3];
+        }
+        while (i < len && c3 == -1);
+        if (c3 == -1)
+            break;
+        out += String.fromCharCode(((c2 & 0XF) << 4) | ((c3 & 0x3C) >> 2));
+        /* c4 */
+        do {
+            c4 = str.charCodeAt(i++) & 0xff;
+            if (c4 == 61)
+                return out;
+            c4 = base64DecodeChars[c4];
+        }
+        while (i < len && c4 == -1);
+        if (c4 == -1)
+            break;
+        out += String.fromCharCode(((c3 & 0x03) << 6) | c4);
+    }
+    return out;
+}
+
+
+
+function getUrlParam(name)
+{ //获取url中的参数
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	if (r!=null) return unescape(r[2]); return null; //返回参数值
+}
+
+function getStrParam(str,name)
+{ //获取字符串中的参数
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	var r = str.match(reg);  //匹配目标参数
+	if (r!=null) return unescape(r[2]); return null; //返回参数值
+}
+
+//de64Data=base64decode(getUrlParam('enc'));//获取url中的enc参数
+
+//gwidData=getStrParam(de64Data,'gwid');//获取字符串中的gwid参数
+
+//alert(gwidData);//演示
+
+</script>

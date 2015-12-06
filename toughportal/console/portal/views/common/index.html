@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录成功_沃云网络无线网络</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/static/common/public/sz-telecom/zglt/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/common/public/sz-telecom/zglt/css/font-awesome.min.css">
+<link href="/static/common/public/sz-telecom/zglt/css/style.css" rel="stylesheet" type="text/css">
+<script src="http://www.wepower365.com/static/user/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://pv.sohu.com/cityjson" charset="gb2312"></script>  
+<script type="text/javascript">  
+$(document).ready(function() {  
+	var ip = returnCitySN.cip;
+   $('a').click(function(){
+	   var url = $(this).attr('href');
+	   var name = $(this).text();
+	   if(url && url.indexOf('.') > 0)
+	   $.post('http://112.84.178.36:8080/wportal/statis/add',{'statistics.ip':ip,'statistics.url':url,'statistics.name':name},function(){});
+	   });
+});  
+
+</script>
+<style>.kf_tel {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80%;
+  width: 40%;
+  margin-top: 10px;
+}</style>
+</head>
+
+<body class="reg-bk allcenter reg-c">
+<header>
+      <div class="reg-c" style="position:relative;"><img src="/static/common/public/sz-telecom/zglt/images/header-bg.jpg" width="100%"/>
+        <a href="tel:4000309309" class="kf_tel"></a>
+        <!-- tel:4000309309 -->
+
+    </div>
+</header>
+<!---右上角广告-->
+<!---<script src="http://ggj.haiyunx.com/js/9199a1ce7b7c5a67bf39"></script> -->
+
+<div class="reg-c" style=" margin:10px 0px 10px 0px;height:40px;padding: 3px 10px;">
+ <p style="margin:0 auto;"><strong style="color:#EB7020; float:left;">
+ <h4 style="text-align: center;margin: 0;"><i class="icon-ok-sign i-l" style="font-size:2em;vertical-align: sub;"></i>&nbsp;&nbsp;&nbsp;登录成功</h4></strong>
+ <a class="btn btn-large btn-block btn-success" class="loginOn"  style="margin-bottom:10px;width:100px;float:right;border-color:#EB7020;" href="">重&nbsp;置&nbsp;密&nbsp;码&nbsp;</a>
+ </p>
+<!--  <img src="images/ad2.jpg" width="100%"/> -->
+</div>
+
+<div class="reg-c"  style=" margin:10px 0px 10px 0px; padding:0px !important; "><!--分类管理-->
+<section class="mod_box section">
+<div class="site_nav">
+
+<nav class="title" style="border-top: 1px solid #EB7020;color: #EB7020;">
+    <strong>免费游戏</strong>
+<!--<em style=""><a href="applist.htm">更多</a></em> -->
+</nav> 
+
+<ul class="clearfix">
+<!-- <li><a href="http://owan-cdn.ymapp.com/chn/2014/12/3/UmiNew_1201_YM1052_646a6570.apk"><img src="public/sz-telecom/zglt/images/kaixinbuyu.png" alt="开心捕鱼">开心捕鱼</a></li>
+<li><a href="http://owan-cdn.ymapp.com/chn/2014/12/3/mhlj-10-youmi64-20141202_344c7107.apk" ><img src="public/sz-telecom/zglt/images/fkllk.png"  alt="疯狂连连看">疯狂连连看</a></li>
+<li><a href="http://owan-cdn.ymapp.com/chn/2014/12/3/ttpaoku__you_mi_03420141203_76780de2.apk" ><img src="public/sz-telecom/zglt/images/ttpktbb.png"  alt="天天跑酷特别版">天天跑酷特别版</a></li>
+<li><a href="http://owan-cdn.ymapp.com/chn/2014/12/3/xiao_mie_pao_pao_-_you_mi_-13421019--v1.2.1_acde8ea2.apk" ><img src="public/sz-telecom/zglt/images/xmpp.png"  alt="消灭泡泡">消灭泡泡</a></li> -->
+<li><a href="http://www.wepower365.com/games/wifi/fkgg.apk" ><img src="/static/common/public/sz-telecom/zglt/images/icon1.png"  alt="疯狂呱呱">疯狂呱呱</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/sbjddyj.apk" ><img src="/static/common/public/sz-telecom/zglt/images/icon2.png"  alt="深不见底的窨井">深不见底的窨井</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/fkznm.apk" ><img src="/static/common/public/sz-telecom/zglt/images/icon3.png"  alt="疯狂找尼玛">疯狂找尼玛</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/xkjz.apk" ><img src="/static/common/public/sz-telecom/zglt/images/icon4.png"  alt="星空激战">星空激战</a></li>
+<li><a href="http://pkg.go.cc/5051cywifi.apk" target=_blank><img src="/static/common/public/sz-telecom/zglt/images/zjns.png"  alt="拯救女神">拯救女神</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/kingII_1468_Android.apk" target=_blank><img src="/static/common/public/sz-telecom/zglt/images/junwang.png"  alt="君王2">君王2</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/war2victory_v1.0.25_201412221608_GZJY_CN.apk" ><img src="/static/common/public/sz-telecom/zglt/images/ezfy.png"  alt="二战风云">二战风云</a></li>
+<li><a href="http://www.wepower365.com/games/wifi/product_official(1.1.0)Ad1635.apk" ><img src="/static/common/public/sz-telecom/zglt/images/tjxm.jpg"  alt="太极熊猫">太极熊猫</a></li>
+</ul>
+</div>
+</section>
+</div><!--/分类管理-->
+     
+<!-- 分类管理2 -->
+<div class="" style=" margin:10px 0px 10px 0px;"><!-- reg-c -->
+  <div class="wrap category"> 
+  <!--  <nav class="title">
+    <strong>热点分类</strong>
+    <em></em>
+   </nav>  -->
+<div class="catebox"> 
+    <div class="subcate">
+     <a href="##">推荐</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+	   <li style=" width: 25%;"><a data-id="4677" href="http://www.wepower365.com/games/wifi/didi_psngr_681.apk">滴滴打车</a></li>
+	   <li style=" width: 25%;"><a href="http://www.wepower365.com/games/wifi/fkgg.apk" >疯狂呱呱</a></li>
+	   <li style=" width: 25%;"><a href="http://www.wepower365.com/games/wifi/xkjz.apk" >星空激战</a></li>
+      <li style=" width: 25%;"><a id="catalog17" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 	     
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/17/vs/touch">影视</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4677" href="http://www.youku.com/">优酷</a></li>
+      <li><a data-id="4665" href="http://m.letv.com/">乐视</a></li>
+      <li><a data-id="1784" href="http://www.tudou.com/">土豆</a></li>
+      <li><a data-id="4779" href="http://android.myapp.com/myapp/detail.htm?apkName=com.origin.playlet">BigFun</a></li> 
+      <li><a id="catalog178" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 	     
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/19/vs/touch">小说</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4981" href="http://t.shuqi.com/#!/ac/in/ct/def/">书旗</a></li>
+      <li><a data-id="4523" href="http://shucheng.baidu.com/">书城</a></li>
+      <li><a data-id="11" href="http://m.hongxiu.com/index.htm">红袖</a></li>
+      <li><a data-id="16" href="http://3gdh.17kss.com/">17K</a></li> 
+      <li><a id="catalog19" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/2/vs/touch">网盘</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4202" href="http://m.115.com/">115网盘</a></li>
+      <li><a data-id="4076" href="http://pan.baidu.com/">百度云</a></li>
+      <li><a data-id="5765" href="http://www.weiyun.com/mobile.php">微云</a></li>
+      <li><a data-id="5317" href="http://yunpan.360.cn/?qtrad=1">360云</a></li> 
+      <li><a id="catalog20" class="goshow"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/21/vs/touch">图片</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="8525" href="http://xiunl.com/">女郎</a></li>
+      <li><a data-id="2423" href="http://ltuj.com/cai">靓图</a></li>
+      <li><a data-id="7119" href="http://p.lexun.net/mt/index.html">美图</a></li>
+      <li><a data-id="7115" href="http://latu.3g.cn/#206">辣图</a></li> 
+      <li><a id="catalog21" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/2/vs/touch">购物</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4202" href="http://m.jd.com/">京东</a></li>
+      <li><a data-id="4076" href="http://www.amazon.cn/">亚马逊</a></li>
+      <li><a data-id="5765" href="http://m.suning.com/">苏宁</a></li>
+      <li><a data-id="5317" href="http://65181.mmb.cn/wap/touch/column.do?columnId=27">买卖宝</a></li> 
+      <li><a id="catalog2" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+<!--   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/16/vs/touch">游戏</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="948" href="http://i.9game.cn/">九游</a></li>
+      <li><a data-id="3758" href="http://lewan.cn/#!/">乐玩</a></li>
+      <li><a data-id="74" href="http://x.d.cn/">当乐</a></li>
+      <li><a data-id="4875" href="http://g.qq.com/">QQ游</a></li> 
+      <li><a id="catalog16" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+-->   
+  </div>
+</div>  <!-- reg-c -->
+<!-- /分类管理2 -->
+<!-- 分类管理3 -->
+<div class="" style=" margin:10px 0px 10px 0px;"><!-- reg-c -->
+  <div class="wrap category"> 
+   <nav class="title">
+    <strong>生活服务</strong>
+    <em></em>
+   </nav> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/231/vs/touch">生活</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+	 <li><a data-id="8463" href="http://wap.10010.com/t/home.htm">联通营业厅</a></li>
+      <li><a data-id="8463" href="http://www.wo116114.com/">116114</a></li>
+      <li><a data-id="8461" href="http://m.soujibing.com/">搜疾病</a></li>
+      <li><a data-id="8463" href="http://m.baike.so.com/index.html">百科</a></li>
+      <li><a id="catalog2315" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/39/vs/touch">女性</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="412" href="http://wap.rayli.com.cn/">瑞丽</a></li>
+      <li><a data-id="8449" href="http://m.lady8844.com/">爱美</a></li>
+      <li><a data-id="8451" href="http://m.lady8844.com/">秀美</a></li>
+      <li><a data-id="8453" href="http://m.nvsheng.com/">女生</a></li> 
+      <li><a id="catalog39" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/231/vs/touch">生活</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="8463" href="http://m.baike.so.com/index.html">百科</a></li>
+      <li><a data-id="5503" href="http://m.soufun.com/xf.d?m=xflist&city=suzhou&sf_source=wapxf_suzhou_baoruan">搜房</a></li>
+      <li><a data-id="8461" href="http://m.soujibing.com/">搜疾病</a></li>
+      <li><a data-id="5497" href="http://m.51job.com/">51job</a></li> 
+      <li><a id="catalog231" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/37/vs/touch">健康</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4715" href="http://3g.xywy.com/">寻医</a></li>
+      <li><a data-id="4719" href="http://m.39yst.com/">养生堂</a></li>
+      <li><a data-id="4703" href="http://m.39.net/">39健康</a></li>
+      <li><a data-id="4711" href="http://m.120ask.com/">问医生</a></li> 
+      <li><a id="catalog37" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/245/vs/touch">彩票</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="397" href="http://8.sina.cn/index.do?agentId=62463&vt=3">购彩</a></li>
+      <li><a data-id="6053" href="http://3g.500.com/info/prize/open/index.action?coopid=1315">开奖</a></li>
+      <li><a data-id="6049" href="http://3g.iletou.com/?partnerId=1153">爱乐透</a></li>
+      <li><a data-id="8465" href="http://m.quecai.com/">雀彩</a></li> 
+      <li><a id="catalog245" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/27/vs/touch">查询</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="453" href="http://weather.html5.qq.com/">天气</a></li>
+      <li><a data-id="461" href="http://dp.sina.cn/dpool/tools/train2/index_tab2.php">火车</a></li>
+      <li><a data-id="185" href="http://m.ctrip.com/html5/Flight/#&do_not_show_add_to_home_tip=1">机票</a></li>
+      <li><a data-id="460" href="http://wap.3gdh.cn/go/460">快递</a></li> 
+      <li><a id="catalog27" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  </div>  <!-- reg-c -->
+<!-- /分类管理3 -->
+<!-- 分类管理3 -->
+<div class="" style=" margin:10px 0px 10px 0px;"><!-- reg-c -->
+ <div class="wrap category"> 
+   <nav class="title">
+    <strong>娱乐休闲</strong>
+    <em></em>
+   </nav> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/4/vs/touch">音乐</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4475" href="http://m.y.qq.com/?ADTAG=3gqqmusic">QQ</a></li>
+      <li><a data-id="96" href="http://m.kugou.com/">酷狗</a></li>
+      <li><a data-id="5105" href="http://m.xiami.com/">虾米</a></li>
+      <li><a data-id="5107" href="http://m.kuwo.cn/">酷我</a></li> 
+      <li><a id="catalog4" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/255/vs/touch">应用</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="4927" href="http://i.baoruan.com/">宝软</a></li>
+      <li><a data-id="4196" href="http://3g.gfan.com/">机锋</a></li>
+      <li><a data-id="7205" href="http://a.myapp.com/h/?from=pcaccess#from=pcaccess">应用宝</a></li>
+      <li><a data-id="4197" href="http://m.anzhi.com/">安智</a></li> 
+      <li><a id="catalog255" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/35/vs/touch">汽车</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="3652" href="http://m.autohome.com.cn/">之家</a></li>
+      <li><a data-id="4693" href="http://m.cheshi.com/">车市</a></li>
+      <li><a data-id="68" href="http://a.xcar.com.cn/">爱卡</a></li>
+      <li><a data-id="70" href="http://m.pcauto.com.cn/">太平洋</a></li> 
+      <li><a id="catalog35" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/129/vs/touch">娱乐</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="597" href="http://3g.163.com/ent/">网易</a></li>
+      <li><a data-id="598" href="http://m.sohu.com/c/4/?_once_=000025_top_yule_v3">搜狐</a></li>
+      <li><a data-id="602" href="http://ent.sina.cn/?pos=1&vt=4&wm=1892">新浪</a></li>
+      <li><a data-id="2747" href="http://info.3g.qq.com/g/s?aid=ent_h">腾讯</a></li> 
+      <li><a id="catalog129" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+   <div class="catebox"> 
+    <div class="subcate">
+     <a href="http://wap.3gdh.cn/class/sub/id/205/vs/touch">星座</a>
+    </div> 
+    <div class="threecate"> 
+     <ul class="catelist"> 
+      <li><a data-id="836" href="http://ast.sina.cn/?vt=4&pos=19">新浪</a></li>
+      <li><a data-id="2758" href="http://bbs.lexun.com/page/index.aspx?page_item_id=49">乐讯</a></li>
+      <li><a data-id="837" href="http://shuqi.com/?&uat=11271&v=2">泡泡</a></li>
+      <li><a data-id="838" href="http://3g.163.com/astro/">网易</a></li> 
+      <li><a id="catalog205" class="goshow" onclick="showmore(this)"></a></li>
+     </ul> 
+    </div> 
+   </div> 
+  </div>
+  </div>  <!-- reg-c -->
+<!-- /分类管理3 -->
+<div class="clr"></div>     
+<!--<div class="ad reg-c"><img src="public/sz-telecom/zglt/images/ad1.jpg" width="100%"/></div>-->
+<footer>
+	<div class="copyight"><div class="reg-c" style=" margin:10px 0px 10px 0px;"><p>Copyright © 2015 沃云网络 版权所有</p></div></div>
+</footer>
+</body>
+</html>

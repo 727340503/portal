@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${tpl.get('page_title') or u'登录_中国联通无线网络'}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/static/unicom/public/sz-telecom/zglt/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/unicom/public/sz-telecom/zglt/css/font-awesome.min.css">
+<link href="/static/unicom/public/sz-telecom/zglt/css/style.css" rel="stylesheet" type="text/css">
+<!-- jQuery 2.1.3 -->
+<script src="/static/js/jquery-1.11.0.min.js"></script>
+
+<script src="/static/unicom/images/iscroll4.1.9.js"></script>
+<link href="/static/unicom/css/mini.css" rel="stylesheet" type="text/css" />
+    <style>
+        .clr {
+            clear: both;
+        }
+
+        .pwd_f {
+            width: 49%;
+        }
+
+        .contact {
+            width: 49%;
+        }
+    </style>
+
+<script type="text/javascript">
+// 初始化幻灯
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function() {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+		}
+	});
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+</head>
+
+<body class="reg-bk allcenter reg-c">
+<header>
+    	<div class="reg-c" style="position:relative;"><img src="${tpl.get('header_img') or '/static/unicom/public/sz-telecom/zglt/images/header-bg.jpg'}" width="100%"/>
+       	<a href="tel:4000309309" class="kf_tel"></a>
+       	<!-- tel:4000309309 -->
+
+    </div>
+</header>
+
+
+<div class="reg-c" style=" margin:5px 0px 5px 0px;  /*text-indent: 2em;*/min-height: 173px; ">
+<!--输入框-->
+        <form action="${authurl or '/login'}" method="post" name="getPass" id="loginForm" class="center">
+            <input id="checkPic" type="checkbox" name="memberPass" class=""  checked>
+            <label for="checkPic" style="display: inline-block;padding:0px;">本人接受<a href="/xieyi?tpl_name=${tpl.get('tpl_name','')}" style="color:#fb2323;">中国联通信息安全协议</a></label>
+            <span style="padding-right: 5px; font-size: 12px; float: right;color: #C0BFBF;">
+				<a href="http://112.84.178.41/siwifiweb/toWjPwd">忘记密码</a></span>
+			${handler.xsrf_form_html()}
+			<input type="hidden" name="qstr" value="${qstr or ''}">
+			<input id="username" type="tel" name="username" class="newTxt b100 input-reg" value="" placeholder="用户名：（手机号码）">
+            <input id="password" type="password" name="password" class="newTxt b100 input-reg" value="" placeholder="密码：">
+            <div class="clr"></div>
+            <div style="font-size: 12px;padding: 0 10px;color: #F16364;padding-bottom: 5px;">
+				温馨提示：本账号仅限本机设备注册后使用，如设备变更需向客服重新申请。
+			</div>
+			% if msg:
+			<div style="font-size: 12px;padding: 0 10px;color: #F16364;padding-bottom: 5px;">${msg}</div>
+			% endif
+			<input class="pass-button b100 " type="button" onclick="doSubmit();"  value="登&nbsp;&nbsp;录">
+            <div class="clr"></div>
+            </p>
+            <a id="baozhang" href="http://112.84.178.41/siwifiweb/toPhone?ssid=${ssid or 'default'}" class="pwd_f bt">我要开通（户）</a>
+			<a id="tiyan" href="http://112.84.178.41/siwifiweb/experience?ssid=${ssid or ''}" class="contact bt">免费体验</a>
+        </form>
+<div class="clr"></div>
+	
+</div>
+	
+	<!--幻灯片-->
+<div class="banner">
+
+<div id="wrapper">
+<div id="scroller">
+<ul id="thelist">
+
+<li><p></p><img src="${tpl.get('ad1_img') or '/static/unicom/public/sz-telecom/zglt/images/1.jpg'}"></li>
+<li><p></p><img src="${tpl.get('ad2_img') or '/static/unicom/public/sz-telecom/zglt/images/2.jpg'}"></li>
+
+</ul>
+</div>
+</div>
+
+<div id="nav">
+<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
+<ul id="indicator">
+<li class="active">1</li>
+<li>2</li>
+
+</ul>
+<div id="next" onclick="myScroll.scrollToPage('next', 0,400,3);return false">next &rarr;</div>
+</div>
+<div class="clr"></div>
+</div>
+
+<!--幻灯片end-->
+
+
+
+
+<footer>
+	<div class="copyight" style="margin:5px 0px 5px 0px;"><div class="reg-c" style=" margin:5px 0px 5px 0px;padding:5px 10px;">© ${tpl.get('copyright') or u'2015 中国联通 版权所有'}</div></div>
+</footer>
+
+<script type='text/javascript'>
+
+function doSubmit(){
+	var m = $("#username");
+	if( !(/^1[3|4|5|7|8][0-9]\d{8}$/.test(m.val())))
+	{
+		alert('请正确填写您的手机号！');
+		m.focus();
+		return false;
+	}
+	else if(m.val()=='')
+	{
+		alert('请填写您的用户账号！');
+		m.focus();
+		return false;
+	}
+	else if(!$('#checkPic').is(':checked'))
+	{
+		alert('必须勾选"我已阅读中国联通信息安全协议"！');
+		return false;
+	}
+	else if($("#password").val() == '' || $("#password").val().length < 6 || $("#password").val().length > 18 )
+	{
+		alert('请输入密码,且密码长度在6-18位之间！');
+		return false;
+	}
+	else
+	{
+		$("#loginForm").submit();
+	}
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
+<script>
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+for(i=0;i<count;i++){
+ document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+
+}
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+ setInterval(function(){
+myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+window.onresize = function(){ 
+for(i=0;i<count;i++){
+document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+ document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+} 
+
+</script>

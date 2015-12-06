@@ -1,0 +1,146 @@
+.playerclass {
+	POSITION: relative;
+	MARGIN: 0px auto;
+	WIDTH: 300px;
+	HEIGHT: 220px;
+	OVERFLOW: hidden
+}
+
+.playerclass .playerpicclass {
+	WIDTH: 300px;
+	DISPLAY: block;
+	HEIGHT: 220px
+}
+
+.playerclass .playerpicclass li {
+	WIDTH: 300px;
+	DISPLAY: block;
+	HEIGHT: 220px;
+	POSITION: absolute;
+	TOP: 0px;
+	LEFT: 0px;
+}
+
+.playerclass .playerpicclass a {
+	WIDTH: 300px;
+	DISPLAY: block;
+	HEIGHT: 220px
+}
+
+.playerclass .playerpicclass img {
+	WIDTH: 300px;
+	DISPLAY: block;
+	HEIGHT: 220px
+}
+
+.playerclass .titleinfoclass{
+	position:absolute;
+	left:10px;
+	bottom:20px;
+	
+}
+.playerclass .titleinfoclass a{
+	font-size:16px;
+	color:#fff;
+	font-weight:800;
+	text-decoration: none;
+}
+.switchclass {
+	Z-INDEX: 2;
+	POSITION: absolute;
+	WIDTH: 100%;
+	BOTTOM: 112px;
+	HEIGHT: 29px;
+	left:0px;
+}
+
+.switchclass p {
+	
+	WIDTH: 43px;
+	BACKGROUND-REPEAT: no-repeat;
+	FLOAT: left;
+	HEIGHT: 43px;
+	CURSOR: pointer;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; /*IE8*/
+    filter:alpha(opacity=20);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: .2;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+    outline: none;
+}
+
+.switchclass .icon_prev {
+	BACKGROUND-IMAGE: url(../images/iconleft.png);
+	POSITION: absolute;
+	left: 15px;
+}
+
+.switchclass .icon_prev:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /*IE8*/
+    filter:alpha(opacity=90);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: .9;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+	
+}
+
+.switchclass .icon_next {
+	BACKGROUND-IMAGE: url(../images/iconright.png);
+	POSITION: absolute;
+	right: 15px;
+}
+
+.switchclass .icon_next:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /*IE8*/
+    filter:alpha(opacity=90);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: .9;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+}
+
+.playerclass .pagerclass {
+	background: #040404;
+	position:absolute;
+	bottom:0;	
+	left:0px;
+	padding: 20px 0;
+	width: 300px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*IE8*/
+    filter:alpha(opacity=30);  /*IE5、IE5.5、IE6、IE7*/
+    opacity: .3;  /*Opera9.0+、Firefox1.5+、Safari、Chrome*/
+text-align: right;
+}
+
+.playerclass .pagerclass li {
+	MARGIN: 0px 4px;
+	border:1px solid orange;
+	color:#000;
+	width:15px;
+	height:15px;
+	font-weight: 800;
+	text-align: center;
+	BACKGROUND: #98e404;
+	display:inline-block;
+	*display:inline;/* 只有ie6和ie7识别*/
+	zoom:1;/* 只有ie6和ie7识别*/
+}
+.playerclass .pagerclass .current {
+	BACKGROUND: orange;
+}
+.playerclass .pagerclass li a {
+	display: block;
+	text-decoration: none;
+	width:15px;
+	height:15px;
+}
+.playerclass .pagerclass .current a{
+	color :#fff;
+}
+a { font-size:12px; color:#5578b5; text-decoration:none}
+a:hover { color:#000; text-decoration:underline}
+.getPsWord {
+	cursor:pointer; background:url(../images/btn.gif) 0 0 no-repeat; width:63px; height:25px; color:#779dcf; text-align:center; border:0;
+	position:absolute; right:0; top:5px; 
+}
+.imgs {
+	cursor:pointer;
+	width:63px; height:25px; color:#779dcf; border:0;
+	position:absolute; right:0; top:5px; 
+}
+.btn{
+	background:url(../images/btn.gif) 0 0 no-repeat; width:63px; height:25px; border:0;text-align:center;color:#779dcf;
+}

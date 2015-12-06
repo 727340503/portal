@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>在线充值_中国联通无线网络</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/static/unicom/public/sz-telecom/zglt/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/unicom/public/sz-telecom/zglt/css/font-awesome.min.css">
+<link href="/static/unicom/public/sz-telecom/zglt/css/style.css" rel="stylesheet" type="text/css">
+<link href="/static/unicom/css/mini.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/aaa/pageset/js/autoLogin.js"></script>
+<style type="text/css">
+.err_msg{  list-style-type: none;
+  margin: 20px auto 40px;
+  padding-left: 10px;
+  border: 1px solid #F7F7F7;
+  width: 80%;
+  background:#fff url(/static/unicom/images/err_pic.jpg) no-repeat right bottom;}
+
+ .err_msg li{
+ 
+ line-height: 40px;
+  text-indent: 8px;
+ }
+ 
+  .err_msg li:first-child{
+  text-indent: 0px;
+  color: #F33;
+  font-weight: bold;
+ }
+</style>
+
+</head>
+
+<body class="reg-bk allcenter reg-c">
+<header>
+      <div class="reg-c" style="position:relative;"><img src="/static/unicom/public/sz-telecom/zglt/images/header-bg.jpg" width="100%"/>
+        <a href="tel:4000309309" class="kf_tel"></a>
+        <!-- tel:4000309309 -->
+
+    </div>
+</header>
+<div class="reg-c" style=" margin:5px 0 5px 0;">
+ <p><strong style="color:#F33;"><h4 style="text-align: center;"><i class="icon-remove-sign i-l" style="font-size:2em;vertical-align: sub;"></i>&nbsp;&nbsp;登录失败！</h4></strong> 
+ 			<ul class="err_msg">
+
+				<li>可能原因：</li>
+
+				<li>1.密码错误</li>
+
+				<li>2.账号不存在。</li>
+
+				<li>3.用户已过期。</li>
+		
+
+			</ul>
+
+ </p>
+ <div class="auto_back"><span class="sec_color" id="sec_color">10</span>&nbsp;秒后自动返回！或点击<a id="relogin" href="javascript:history.go(-1);" onclick="retrunLogin()" style="color:#ff0000">这里</a>返回</div>
+
+
+ <p style="text-align:center;margin:20px 0px;"> 请联系客服处理或客户经理报装！</p>
+ <a href="tel:4000309309" class="contact_e bt" >联系客服</a>
+            <a id="baozhang" href="http://112.84.178.41/siwifiweb/toPhone" class="pwd_f_e bt" style="margin-left: 2%;">我要开通（户）</a>
+            <div class="clr"></div><br>
+</div>
+
+<footer>
+	<div class="copyight" style="margin:5px 0px 5px 0px;"><div class="reg-c" style=" margin:5px 0px 5px 0px;">Copyright © 2015 中国联通 版权所有</div></div>
+</footer>
+
+<script type='text/javascript'>
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null)
+		return decodeURI(r[2]);
+	return null;
+}
+
+$(function(){
+	var ssid = getQueryString("ssid");
+	$("#ssid").val(ssid);
+    $('#baozhang').attr('href','http://112.84.178.41/siwifiweb/toPhone?ssid='+ssid);
+	});
+
+ function retrunLogin() {
+
+	d = new Date();
+	location.href='https://www.baidu.com?' + d.getTime();
+}
+
+</script>
+
+<script type="text/javascript">  
+//设定倒数秒数  
+var t = 10;  
+d = new Date();
+//显示倒数秒数  
+function showTime(){  
+    t -= 1;  
+    document.getElementById('sec_color').innerHTML= t;  
+    if(t==0){  
+        window.history.go(-1);  
+    }  
+    //每秒执行一次,showTime()  
+    setTimeout("showTime()",1000);  
+}  
+//执行showTime()  
+showTime();  
+</script>
+
+</body>
+</html>
